@@ -115,14 +115,16 @@ public class Tabeller {
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 
-		int [] tabell3= new int [tabell1.length];
-        for(int i=0; i<tabell1.length; i++) {
-      	  tabell3[i]= tabell1[i]; 
+		int [] tabell3= new int [tabell1.length+tabell2.length];
+		int j= 0; 
+        for(int i=0; i<tabell1.length; i++, j++) {
+      	  tabell3[j]= tabell1[i]; 
       	  
        
         }
-        for(int i=0; i<tabell2.length; i++) {
-        	tabell3[i]= tabell2[i]; 
+        for(int i=0; i<tabell2.length; i++, j++) {
+        	tabell3[j]= tabell2[i];
+
         }
   return tabell3;
 	}
